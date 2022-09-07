@@ -1,0 +1,50 @@
+.background_form{
+    background-color: #1E3557;
+    text-align: center;
+    color: white;
+}
+
+.btn_form{
+    background-color: #FF6d74;
+    color: #FFFFFF;
+    margin: auto;
+    display: block;
+}
+
+.button_admin{
+    background-color: #FF6d74;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px 2px;
+    cursor: pointer;
+}
+
+.message{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.link_message{
+    text-decoration: none;
+    color: black;
+}
+
+.button_back{
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-right: 14px solid #e2e2e2;
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    right: 98%;
+    z-index: 2;
+}

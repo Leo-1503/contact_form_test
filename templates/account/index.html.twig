@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boite de réception{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="shadow p-5 rounded col-10 mx-auto mt-5">
+            <a class="button_admin" href="{{ path('app_logout')}}">Déconnexion</a>
+            <h1>Bienvenue sur votre espace personnel</h1>
+            <p>Boite de réception</p>
+            <div class="background_form">
+                <div class="row">
+                    <div class="col-3">
+                        Email
+                    </div>
+                    <div class="col-3">
+                        Nom
+                    </div>
+                    <div class="col-4">
+                        Message
+                    </div>
+                    <div class="col-2">
+                        lu
+                    </div>
+                </div>
+                <hr>
+            </div>
+            {% for question in questions %}
+                <a class="link_message" href="{{path('message_show', {'id' : question.id})}}">
+                    <div class="row">
+                        <div class="col-3">
+                            {{ question.email }}
+                        </div>
+                        <div class="col-3">
+                            {{ question.lastname }}
+                        </div>
+                        <div class="col-4">
+                            <p class="message">{{ question.message }}</p>
+                        </div>
+                        <div class="col-2">
+                            <input
+                                class="question-checkbox"
+                                data-question-id="{{ question.id }}"
+                                type="checkbox"
+                                    {% if question.checked %} checked disabled {% endif %}
+                            >
+                        </div>
+                    </div>
+                </a>
+                <hr>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

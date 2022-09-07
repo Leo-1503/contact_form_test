@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Message{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="shadow p-5 rounded col-10 mx-auto mt-5">
+            <a class="button_admin" href="{{ path('app_account')}}">Retour</a>
+            <h1>Demande de contact</h1>
+            <p>Nom :
+                {{ question.lastname }}</p>
+            <p>Email :
+                {{ question.email }}</p>
+            <p>Message:</p>
+            {{ question.message }}
+            <hr>
+        </div>
+    </div>
+{% endblock %}
